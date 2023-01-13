@@ -59,12 +59,12 @@ describe Budget do
     fy1213.add_department(hr)
 
     expect(fy1213.salaries).to eq({
-      "Aaron Tanaka" => 90000,
       "Bobbi Jaeger" => 100000,
+      "Aaron Tanaka" => 90000,
+      "Tori Enyart" => 5000,
       "Foster Denney" => 7500,
       "Hannah Provost" => 6000,
-      "Kelly Kapoor" => 7000,
-      "Tori Enyart" => 5000
+      "Kelly Kapoor" => 7000
     })
   end
 

@@ -24,37 +24,39 @@ describe Department do
     expect(customer_service.employees).to eq([bobbi, aaron])
   end
 
+  #comment out for iteration 4
+  it 'can add and track expenses' do
+    expect(customer_service.expenses).to eq(0)
+
+    customer_service.expense(100)
+    customer_service.expense(25)    
+
+    expect(customer_service.expenses).to eq(125)
+  end
+
+  #comment in for iteration 4
   # it 'can add and track expenses' do
-  #   expect(customer_service.expenses).to eq(0)
+  #   expect(customer_service.expensed_items).to eq([])
+  #   expect(customer_service.total_expenses).to eq(0)
 
-  #   customer_service.expense(100)
-  #   customer_service.expense(25)    
+  #   customer_service.expense(bobbi, 50, 'business cards')
+  #   customer_service.expense(aaron, 12, 'lunch')    
 
-  #   expect(customer_service.expenses).to eq(125)
+  #   expect(customer_service.expensed_items.length).to eq(2)
+  #   expect(customer_service.expensed_items.first).to be_an_instance_of Expense
+
+  #   expect(customer_service.total_expenses).to eq(62)
   # end
 
-  it 'can add and track expenses' do
-    expect(customer_service.expensed_items).to eq([])
-    expect(customer_service.total_expenses).to eq(0)
+  # it 'can pull expenses by employee' do
+  #   customer_service.expense(bobbi, 50, 'business cards')
+  #   customer_service.expense(aaron, 12, 'lunch')
 
-    customer_service.expense(bobbi, 50, 'business cards')
-    customer_service.expense(aaron, 12, 'lunch')    
-
-    expect(customer_service.expensed_items.length).to eq(2)
-    expect(customer_service.expensed_items.first).to be_an_instance_of Expense
-
-    expect(customer_service.total_expenses).to eq(62)
-  end
-
-  it 'can pull expenses by employee' do
-    customer_service.expense(bobbi, 50, 'business cards')
-    customer_service.expense(aaron, 12, 'lunch')
-
-    expect(customer_service.expenses_by_employee(bobbi).first).to be_an_instance_of Expense
+  #   expect(customer_service.expenses_by_employee(bobbi).first).to be_an_instance_of Expense
     
-    business_cards = customer_service.expenses_by_employee(bobbi).first
+  #   business_cards = customer_service.expenses_by_employee(bobbi).first
 
-    expect(business_cards.item_name).to eq('business cards')
-  end
+  #   expect(business_cards.item_name).to eq('business cards')
+  # end
 
 end

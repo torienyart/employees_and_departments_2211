@@ -10,6 +10,7 @@ class Budget
     @departments << dep
   end
 
+  #comment out for it 4 (line 14-28)
   def expenses_less_than(num)
     @departments.find_all do |department|
       department.expenses < num
@@ -25,4 +26,11 @@ class Budget
     end
     salaries_hash
   end
+
+  #comment in for it 4 
+  # def expenses_less_than(num)
+  #   @departments.find_all do |department|
+  #     department.expenses.cost < num
+  #   end
+  # end
 end

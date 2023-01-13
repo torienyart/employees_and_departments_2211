@@ -21,7 +21,7 @@ describe Department do
     customer_service.hire(bobbi)
     customer_service.hire(aaron)
 
-    expect(customer_service.employees).to eq(bobbi, aaron)
+    expect(customer_service.employees).to eq([bobbi, aaron])
   end
 
   it 'can add and track expenses' do

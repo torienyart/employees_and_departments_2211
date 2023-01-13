@@ -22,9 +22,15 @@ describe Budget do
     marketing.hire(hannah)
     hr.hire(kelly)
 
+    #comment out for it4
     customer_service.expense(200)
     marketing.expense(15000)
     hr.expense(350)
+
+    #comment in for it4
+    # customer_service.expense(bobbi, 200, 'desk')
+    # marketing.expense(tori, 15000, 'printing magazines')
+    # hr.expense(kelly, 350, 'staff gifts')
   end
 
   it 'exists' do
@@ -45,6 +51,7 @@ describe Budget do
     expect(fy1213.departments).to eq([customer_service, marketing, hr])
   end
 
+  
   it 'can list departments w/ expenses less than $500' do
     fy1213.add_department(customer_service)
     fy1213.add_department(marketing)

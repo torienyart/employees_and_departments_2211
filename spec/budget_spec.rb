@@ -49,5 +49,15 @@ describe Budget do
     expect(fy1213.low_expense_departments).to eq([customer_service, hr])
   end
 
-  
+  it 'can list employee salaries' do
+    expect(fy1213.salaries).to eq({
+      "Bobbi Jaeger" => 100000,
+      "Aaron Tanaka" => 90000,
+      "Tori Enyart" => 5000,
+      "Foster Denney" => 7500,
+      "Hannah Provost" => 6000,
+      "Kelly Kapoor" => 7000
+    })
+  end
+
 end

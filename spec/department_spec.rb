@@ -24,13 +24,26 @@ describe Department do
     expect(customer_service.employees).to eq([bobbi, aaron])
   end
 
+  # it 'can add and track expenses' do
+  #   expect(customer_service.expenses).to eq(0)
+
+  #   customer_service.expense(100)
+  #   customer_service.expense(25)    
+
+  #   expect(customer_service.expenses).to eq(125)
+  # end
+
   it 'can add and track expenses' do
-    expect(customer_service.expenses).to eq(0)
+    expect(customer_service.expense_items).to eq([])
+    expect(customer_service.total_expenses).to eq(0)
 
-    customer_service.expense(100)
-    customer_service.expense(25)    
+    customer_service.expense((bobbi, 50, 'business cards'))
+    customer_service.expense(aaron, 12, 'lunch')    
 
-    expect(customer_service.expenses).to eq(125)
+    expect(customer_service.expense_items.length).to eq(2)
+    expect(customer_service.expense_items.first).to be_an_instance_of Expense
+
+    expect(customer_service.total_expenses).to eq(62)
   end
 
 

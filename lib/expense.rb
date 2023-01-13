@@ -1,3 +1,5 @@
+require_relative 'department'
+
 class Expense
 
   attr_reader :spender, :cost, :item

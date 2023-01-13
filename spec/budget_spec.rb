@@ -55,12 +55,12 @@ describe Budget do
 
   it 'can list employee salaries' do
     expect(fy1213.salaries).to eq({
-      "Bobbi Jaeger" => 100000,
       "Aaron Tanaka" => 90000,
-      "Tori Enyart" => 5000,
+      "Bobbi Jaeger" => 100000,
       "Foster Denney" => 7500,
       "Hannah Provost" => 6000,
-      "Kelly Kapoor" => 7000
+      "Kelly Kapoor" => 7000,
+      "Tori Enyart" => 5000
     })
   end
 

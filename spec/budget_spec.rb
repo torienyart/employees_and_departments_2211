@@ -44,4 +44,10 @@ describe Budget do
 
     expect(fy1213.departments).to eq(["Customer Service", "Marketing", "Human Resources"])
   end
+
+  it 'can list departments w/ expenses less than $500' do
+    expect(fy1213.low_expense_departments).to eq([customer_service, hr])
+  end
+
+  
 end

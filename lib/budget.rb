@@ -10,9 +10,9 @@ class Budget
     @departments << dep
   end
 
-  def low_expense_departments
+  def expenses_less_than(num)
     @departments.find_all do |department|
-      department.expenses < 500
+      department.expenses < num
     end
   end
 end

@@ -49,8 +49,8 @@ describe Budget do
     fy1213.add_department(customer_service)
     fy1213.add_department(marketing)
     fy1213.add_department(hr)
-    
-    expect(fy1213.low_expense_departments).to eq([customer_service, hr])
+
+    expect(fy1213.expenses_less_than(500)).to eq([customer_service, hr])
   end
 
   it 'can list employee salaries' do

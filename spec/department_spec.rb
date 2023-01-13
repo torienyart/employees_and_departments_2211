@@ -46,7 +46,12 @@ describe Department do
     expect(customer_service.total_expenses).to eq(62)
   end
 
+  it 'can pull expenses by employee' do
+    expect(customer_service.expenses_by_employee(bobbi).first).to be_an_instance_of Expense
+    
+    business_cards = customer_service.expenses_by_employee(bobbi).first
 
-
+    expect(business_cards.name).to be('business cards')
+  end
 
 end

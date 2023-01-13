@@ -23,4 +23,10 @@ class Department
     @total_expenses += new_item.cost
   end
 
+  def expenses_by_employee(employee)
+    @expensed_items.find_all do |item|
+      item.spender == employee
+    end
+  end
+
 end

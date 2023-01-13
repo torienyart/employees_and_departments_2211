@@ -34,4 +34,14 @@ describe Budget do
   it 'has readable attributes' do
     expect(fy1213.year).to eq("FY2012-2013")
   end
+
+  it 'can add and list all departments' do
+    expect(fy1213.departments).to eq([])
+
+    fy1213.add_department(customer_service)
+    fy1213.add_department(marketing)
+    fy1213.add_department(hr)
+
+    expect(fy1213.departments).to eq(["Customer Service", "Marketing", "Human Resources"])
+  end
 end

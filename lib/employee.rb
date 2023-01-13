@@ -9,4 +9,8 @@ class Employee
   def salary_converter(info)
     info.scan(/\d/).join('').to_i
   end
+
+  def give_raise(raise)
+    @salary += raise
+  end
 end
